@@ -1,3 +1,125 @@
-body{
-    background-color: rebeccapurple;
+@font-face {
+    font-family: Sf pro;
+    src: url('./asset/resource/fonts/SFPRODISPLAYREGULAR.OTF');
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#full-page{
+    height: 100%;
+}
+
+#website-structure{
+    height: 100%;
+    display: grid;
+    grid-template-rows: min(100px,8vh) 1fr max(100px,10vh);
+}
+
+#header{
+    grid-row: 1/2;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 20px;
+    border-bottom: 1px solid black;
+    backdrop-filter: blur(5px);
+    color: white;
+    font-family: 'Sf pro';
+    font-size: 40px;
+}
+
+#logo{
+    font-weight: 700;
+}
+
+#Weather-Images{
+    height: 100%;
+    grid-row: 1/4;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.visibility{
+    display: block;
+}
+
+#content{
+    margin: 0 20px;
+}
+
+#search-form{
+    width: 500px;
+    text-align: end;
+}
+
+label{
+    
+}
+
+input{
+    width: 200px;
+    vertical-align:middle;
+}
+
+#search-button{
+    vertical-align: middle;
+    height: 30px;
+    width: 70px;
+    border-radius: 20px;
+    font-family: 'sf pro';
+    font-size: medium;
+    cursor: pointer;
+}
+
+#today-stats{
+    width: 400px;
+    border: 1px solid white;
+    margin-top: 30px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    left: 100px;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    font-family: 'Sf pro';
+    font-size: 40px;
+}
+
+#today-stats > div {
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+}
+
+#temp-C{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#locationDiv{
+    font-weight: 700;
+}
+
+#footer{
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    margin: 0 20px;
+    backdrop-filter: blur(5px);
+    color: white;
+    font-family: 'Sf pro';
+    font-size: 30px;
 }
