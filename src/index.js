@@ -40,7 +40,7 @@ async function getLocationWeather(location) {
     content.classList.add = 'blur';
 
     try{
-        const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=GEYB8BQQVR87UD3DBMD6LH2WV&contentType=json`);
+        const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=GEYB8BQQVR87UD3DBMD6LH2WV&contentType=json`, {mode: 'cors'});
         const LocationData = await response.json();
 
         displayWeatherImage(LocationData.currentConditions.conditions);
@@ -88,9 +88,6 @@ function displayWeatherImage(condition){
         cloudy.style.display = 'none';
         partiallyCloudy.style.display = 'none';
         clear.style.display = 'none';
-    }
-    else if(condition === 'sunny'){
-
     }
 }
 
