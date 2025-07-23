@@ -8,7 +8,7 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: "/",
+        publicPath: "/weather-app/",
     },
     devtool: "eval-source-map",
     devServer: {
