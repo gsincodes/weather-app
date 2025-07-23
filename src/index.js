@@ -128,8 +128,6 @@ function forecastWeather(forecastArray){
     return forecastArrayData;
 }
 
-
-
 function forecastWeatherDisplay(myForecastData){
     forecastBody.textContent = "";
     for(let i  in myForecastData){
@@ -152,3 +150,4 @@ function forecastWeatherDisplay(myForecastData){
         console.log("forecast data");
     }
 }
+
