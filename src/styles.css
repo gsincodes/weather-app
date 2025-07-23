@@ -25,15 +25,17 @@ html, body{
     justify-content:space-between;
     align-items: center;
     margin: 0 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     backdrop-filter: blur(5px);
     color: white;
     font-family: 'Sf pro';
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
 #logo{
     font-weight: 700;
+    min-width: 250px;
 }
 
 #Weather-Images{
@@ -57,11 +59,17 @@ img{
 
 #content{
     margin: 0 20px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.blur{
+    backdrop-filter: blur(10px);
 }
 
 #search-form{
-    width: 500px;
     text-align: end;
+    min-width: 800px;
 }
 
 label{
@@ -69,8 +77,18 @@ label{
 }
 
 input{
-    width: 200px;
+    width: 500px;
     vertical-align:middle;
+    border-style: none;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-size: 15px;
+    font-family: 'Sf pro';
+}
+
+input:focus{
+    outline: none;
 }
 
 #search-button{
@@ -81,24 +99,27 @@ input{
     font-family: 'sf pro';
     font-size: medium;
     cursor: pointer;
+    background-color: white;
+    border-style: none;
 }
 
 #today-stats{
-    width: 400px;
+    max-width: 400px;
     border: 1px solid white;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    /* background-color: gray; */
     backdrop-filter: blur(20px);
-    position: relative;
-    left: 100px;
+    /* position: relative; */
+    /* left: 100px; */
     text-align: left;
     padding: 20px;
     color: white;
     font-family: 'Sf pro';
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #today-stats > div {
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid white; */
     margin: 20px 0;
 }
 
@@ -109,6 +130,79 @@ input{
 
 #locationDiv{
     font-weight: 700;
+    font-size: 40px;
+}
+
+#date{
+    /* text-align: right; */
+    font-size: 20px;
+}
+
+#nerd-stats-header{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#nerd-stats{
+    font-size: 25px;
+}
+
+#loading-data{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family: 'Sf pro';
+    font-size: 30px;
+    display: none;
+    backdrop-filter: blur(10px);
+}
+
+#forecast{
+    /* height: 700px; */
+    width: 500px;
+    border: 1px solid white;
+    /* position: absolute; */
+    /* top: 10%; */
+    /* right: 10%; */
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: 'Sf pro';
+    /* text-align: center; */
+    padding: 20px;
+    /* display: flex; */
+}
+
+#forecast-header {
+    /* border-bottom: 1px solid black; */
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+/* #forecast-body > div{
+    border-bottom: 1px solid black;
+    font-size: 22px;
+    margin: 20px 0;
+} */
+
+.daily-stat{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#forecast-body > .forecast-date-text{
+    font-size: 30px;
+    font-weight: bold;
+    /* margin: 0 0; */
 }
 
 #footer{
@@ -116,10 +210,11 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
-    margin: 0 20px;
+    border-top: 1px solid white;
+    margin: 20px;
     backdrop-filter: blur(5px);
     color: white;
     font-family: 'Sf pro';
     font-size: 30px;
 }
+
