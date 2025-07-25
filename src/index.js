@@ -117,7 +117,6 @@ function forecastWeather(forecastArray){
     let forecastArrayData = [];
     for(let i in forecastArray){
         if(i==6){
-            console.log(`this data is from forecastWeather ${forecastArrayData}`);
             return forecastArrayData;
         }
         forecastArrayData.push([forecastArray[i].datetime, forecastArray[i].temp, forecastArray[i].tempmin, forecastArray[i].tempmax, forecastArray[i].humidity]);
@@ -144,7 +143,6 @@ function forecastWeatherDisplay(myForecastData){
                                         Humidity - ${myForecastData[i][4]}%.`;
         forecastBody.appendChild(forecastDateText);
         forecastBody.appendChild(forecastBodyStat);
-        console.log("forecast data");
     }
 }
 
