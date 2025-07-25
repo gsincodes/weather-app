@@ -4,7 +4,7 @@
 }
 
 html, body{
-    height: 100%;
+    height: 100dvh;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,9 @@ html, body{
 #website-structure{
     height: 100%;
     display: grid;
-    grid-template-rows: min(100px,8vh) 1fr max(100px,10vh);
+    grid-template-rows: min(100px, 8vh) 1fr min(100px, 10vh);
+    background-color: black;
+    max-width: 100%;
 }
 
 #header{
@@ -32,25 +34,25 @@ html, body{
     font-family: 'Sf pro';
     font-size: 40px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
 #logo{
     font-weight: 700;
-    min-width: 250px;
+    /* min-width: 250px; */
+    /* min-width:fit-content; */
 }
 
 #Weather-Images{
-    height: 100%;
-    grid-row: 1/4;
     position: absolute;
+    height: 100%;
     width: 100%;
-    z-index: -1;
-    
+    object-fit: cover;
 }
 
 img{
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -70,7 +72,7 @@ img{
 
 #search-form{
     text-align: end;
-    min-width: 800px;
+    max-width:fit-content;
 }
 
 input{
@@ -101,7 +103,7 @@ input:focus{
 }
 
 #today-stats{
-    max-width: 400px;
+    max-width:min-content;
     border: 1px solid white;
     /* margin-top: 30px; */
     /* background-color: gray; */
@@ -113,6 +115,8 @@ input:focus{
     color: white;
     font-family: 'Sf pro';
     font-size: 30px;
+    margin: 0 20px;
+    /* margin-bottom: 20px; */
 }
 
 #today-stats > div {
@@ -165,7 +169,7 @@ input:focus{
 
 #forecast{
     /* height: 700px; */
-    width: 500px;
+    max-width:max-content;
     border: 1px solid white;
     /* position: absolute; */
     /* top: 10%; */
@@ -176,6 +180,7 @@ input:focus{
     /* text-align: center; */
     padding: 20px;
     /* display: flex; */
+    margin: 0 20px;
 }
 
 #forecast-header {
@@ -215,3 +220,43 @@ input:focus{
     font-size: 30px;
 }
 
+@media (max-width: 600px) {
+
+    html, body{
+        overflow-y: scroll;
+    }
+
+    #website-structure{
+        grid-template-rows: 25vh 1fr 10vh;
+    }
+
+    #header{
+        width:auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-evenly;
+    }
+
+    #logo{
+        min-width: 100%;
+        display: block;
+        border-bottom: 1px solid white;
+    }
+
+    #search-form{
+        text-align: left;
+    }
+
+    #content{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    #today-stats{
+        margin-bottom: 20px;
+    }
+
+    input{
+        width: 300px;
+    }
+}
