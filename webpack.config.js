@@ -7,9 +7,9 @@ module.exports = {
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, 'dist'),
-        publicPath: process.env.NODE_ENV === 'production' ? '/weather-app/' : '/', // This makes it run on both local host and gh-pages.
+        // publicPath: process.env.NODE_ENV === 'production' ? '/weather-app/' : '/', // This makes it run on both local host and gh-pages.
         // publicPath: "/", //This make it run only on local host.
-        // publicPath: "/weather-app/", // This makes it run on gh-pages.
+        publicPath: "/weather-app/", // This makes it run on gh-pages.
         clean: true,
     },
     devtool: "eval-source-map",
